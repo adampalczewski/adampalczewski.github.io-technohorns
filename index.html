@@ -88,10 +88,62 @@
     @keyframes glow {
 *
 
-      </style>
+     <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .neon-text {
+      font-size: 6rem;
+      letter-spacing: 0.15em;
+      animation: flash-glow 1.5s infinite alternate;
+      margin-bottom: 3rem;
+    }
+
+    .subname, .live-dates {
+      font-size: 1.5rem;
+      color: #aaa;
+      margin: 0.75rem 0;
+    }
+
+    .image-placeholder {
+      width: 300px;
+      height: 300px;
+      background-color: #111;
+      border: 4px dashed #888;
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    @keyframes flash-glow {
+      0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;
+        opacity: 1;
+      }
+      100% {
+        text-shadow: 0 0 2px #fff, 0 0 5px #0ff;
+        opacity: 0.6;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="neon-text">TECHNOHORNS</div>
+  <div class="image-placeholder">IMAGE COMING SOON</div>
   <div class="subname">UK'S ONLY TECHNO BRASS BAND</div>
   <div class="live-dates">LIVE DATES COMING SOON</div>
 </body>
